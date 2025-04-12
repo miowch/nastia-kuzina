@@ -13,6 +13,7 @@ class Driver:
             deviceName='AndroidTestDevice',
             appPackage='com.monefy.app.lite',
             appActivity='com.monefy.activities.main.MainActivity_',
+            autoGrantPermissions=True
             # app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/com.monefy.app.lite.apk'
         )
 
@@ -20,7 +21,7 @@ class Driver:
             remote_server_addr=server_url_base,
             direct_connection=True,
             keep_alive=False,
-            ignore_certificates=True,
+            ignore_certificates=True
         )
         self.driver = webdriver.Remote(
             options=UiAutomator2Options().load_capabilities(desired_caps),
