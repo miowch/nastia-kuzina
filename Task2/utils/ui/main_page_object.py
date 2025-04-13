@@ -13,6 +13,13 @@ class MainPageObject:
             EC.presence_of_element_located(by),
             message=error_message + '\n')
 
+    def wait_for_elements_present(self, by, error_message, timeout_in_sec=5):
+        wait = WebDriverWait(self.driver, timeout_in_sec)
+
+        return wait.until(
+            EC.presence_of_all_elements_located(by),
+            message=error_message + '\n')
+
     def wait_for_element_and_click(self, by, error_message, timeout_in_sec=5):
         element = self.wait_for_element_present(by, error_message, timeout_in_sec)
         element.click()

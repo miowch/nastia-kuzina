@@ -1,7 +1,8 @@
 import unittest
 
+from Task2.utils.ui.buy_premium_page_object import BuyPremiumPageObject
 from Task2.utils.ui.main_page_object import MainPageObject
-from appium.webdriver.common.appiumby import AppiumBy
+from Task2.utils.ui.welcome_page_object import WelcomePageObject
 
 from Task2.utils.webdriver import Driver
 
@@ -10,50 +11,14 @@ class CoreTestCase(unittest.TestCase):
     def setUp(self):
         self.driver = Driver().driver
         self.main_page_object = MainPageObject(self.driver)
-        self.main_page_object.wait_for_element_present(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/imageViewHero'),
-            error_message='Cannot find imageViewHero'
-        )
+        self.welcome_page_object = WelcomePageObject(self.driver)
+        self.buy_premium_page_object = BuyPremiumPageObject(self.driver)
 
-        self.main_page_object.wait_for_element_and_click(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/buttonContinue'),
-            error_message='Cannot find buttonContinue'
-        )
+        for welcome_step in range (4):
+            self.welcome_page_object.wait_for_image()
+            self.welcome_page_object.tap_continue()
 
-        self.main_page_object.wait_for_element_present(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/imageViewHero'),
-            error_message='Cannot find imageViewHero'
-        )
-
-        self.main_page_object.wait_for_element_and_click(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/buttonContinue'),
-            error_message='Cannot find buttonContinue'
-        )
-
-        self.main_page_object.wait_for_element_present(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/imageViewHero'),
-            error_message='Cannot find imageViewHero'
-        )
-
-        self.main_page_object.wait_for_element_and_click(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/buttonContinue'),
-            error_message='Cannot find buttonContinue'
-        )
-
-        self.main_page_object.wait_for_element_present(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/imageViewHero'),
-            error_message='Cannot find imageViewHero'
-        )
-
-        self.main_page_object.wait_for_element_and_click(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/buttonContinue'),
-            error_message='Cannot find buttonContinue'
-        )
-
-        self.main_page_object.wait_for_element_and_click(
-            by=(AppiumBy.ID, 'com.monefy.app.lite:id/buttonClose'),
-            error_message='Cannot find buttonClose'
-        )
+        self.buy_premium_page_object.close_screen()
 
     def tearDown(self):
         if self.driver:

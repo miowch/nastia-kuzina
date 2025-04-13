@@ -40,7 +40,8 @@
    adb devices
    ```
 4. Run tests.
+
    ```bash
-    pytest Task2/test_one.py 
+    pytest Task2/test_one.py
 
    ```
