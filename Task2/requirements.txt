@@ -1,3 +1,4 @@
 selenium==4.31.0
 allure-python-commons~=2.14.0
 Appium-Python-Client~=5.0.0
+pytest~=8.3.5

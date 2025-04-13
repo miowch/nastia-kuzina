@@ -36,16 +36,15 @@
    ```
    app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/{apkFile}'
    ```
-
 1. Make sure it is the only connected device.
    ```bash
    adb devices
    ```
 1. Run tests.
    ```bash
-   pytest --alluredir Task2/allure-results
+   pytest --alluredir allure-results
    ```
 1. Generate Allure report
    ```bash
-   allure serve Task2/allure-results
+   allure serve allure-results
    ```

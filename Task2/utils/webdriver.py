@@ -14,7 +14,7 @@ class Driver:
             appPackage='com.monefy.app.lite',
             appActivity='com.monefy.activities.main.MainActivity_',
             autoGrantPermissions=True
-            # app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/com.monefy.app.lite.apk'
+            #app='Task2/apks/com.monefy.app.lite.apk'
         )
 
         client_config = AppiumClientConfig(
