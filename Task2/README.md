@@ -1,32 +1,28 @@
 ### Prerequisites
 
 [Python 3](https://www.python.org/downloads/)
-
 [Appium](https://appium.io/docs/en/latest/quickstart/install/)
-
 [Android Debug Bridge (adb)](https://developer.android.com/studio/command-line/adb)
 
 ### Installing
-
 1. Clone the repository.
-2. Go to the cloned directory.
+1. Go to the cloned directory.
    ```bash
    cd <PATH-TO-YOUR-CLONED-DIRECTORY>
    ```
-3. Create and activate virtual environment (e.g. n26_nastia_kuzina).
+1. Create and activate virtual environment (e.g. n26_nastia_kuzina).
    ```bash
    pyenv virtualenv n26_nastia_kuzina
    ```
    ```bash
    pyenv activate n26_nastia_kuzina
    ```
-4. Install packages from "requirements file"
+1. Install packages from "requirements file"
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Running the tests
-
 1. [Start Appium Server.](https://appium.io/docs/en/latest/quickstart/install/#starting-appium)
 1. Run an emulator with installed Monefy app
 
@@ -48,3 +44,21 @@
    ```bash
    allure serve allure-results
    ```
+
+## Reasoning
+I tried to achieve scalability and maintainability of the tests by leaning to the following rules:
+1. Business logic of E2E tests is separated from tests implementation. \
+   Tests are stored in the tests folder and all methods are separated using Page-Object pattern.
+1. Don't Repeat Yourself principle in creating classes, methods and variables.
+1. Explicit waits for elements presence or invisibility instead of sleep method.
+1. Clear reporting with Allure annotations.
+1. Clear README file with information about the project setup and instruction of how to run tests.
+
+I chose **Python** language because I feel more confident in writing the code in it. If I have more time I would rather use **Kotlin** but the rest would be the same, Appium and Allure.
+
+I opted for **Appium** because it provides cross-platform support for Android and iOS apps, it is language agnostic and it drives an app like a real user would, through the actual UI layer.
+
+I selected **Allure** for generating reports because of the following:
+1. Actionable, visual reporting for fast debugging
+1. Clear test coverage and history tracking
+1. Seamless integration with existing tools
