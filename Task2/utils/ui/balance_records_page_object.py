@@ -38,6 +38,13 @@ class BalanceRecordsPageObject (MainPageObject):
             error_message=f'Cannot find note "{note}"'
         )
 
+    def assert_note_absence(self):
+        self.assert_element_has_text(
+            self.note,
+            expected_text='',
+            error_message='Note is present'
+        )
+
     def assert_transaction_date_presence(self):
         self.wait_for_element_present(
             self.transactionDate,

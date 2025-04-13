@@ -4,7 +4,12 @@ from Task2.utils.ui.main_page_object import MainPageObject
 
 
 class DashboardPageObject (MainPageObject):
+    searchIcon: Final = 'id:com.monefy.app.lite:id/menu_search'
+    searchInputField: Final = 'id:com.monefy.app.lite:id/et_search'
+    firstSuggestion: Final = 'xpath://android.widget.ListView[@resource-id="com.monefy.app.lite:id/suggestion_list"]/android.widget.RelativeLayout'
+    piegraph: Final = 'id:com.monefy.app.lite:id/piegraph'
     expenseButton: Final = 'id:com.monefy.app.lite:id/expense_button'
+    incomeButton: Final = 'id:com.monefy.app.lite:id/income_button'
     sliderButton: Final = 'id:com.monefy.app.lite:id/leftLinesImageView'
     amountText: Final = 'id:com.monefy.app.lite:id/amount_text'
     noteInputField: Final = 'id:com.monefy.app.lite:id/textViewNote'
@@ -17,10 +22,50 @@ class DashboardPageObject (MainPageObject):
     categoryElementTmpl: str = 'xpath://android.widget.TextView[@resource-id="com.monefy.app.lite:id/textCategoryName" and @text="{text}"]'
     textElementTmpl: str = 'xpath://android.widget.TextView[@text="{text}"]'
 
-    def add_new_expense(self, value, category, note=None):
+    def add_expense(self, value, category, note=None):
         self.wait_for_element_and_click(
             self.expenseButton,
             error_message='Cannot find expense_button'
+        )
+        self.wait_for_element_present(
+            self.amountText,
+            error_message='Cannot find amount_text'
+        )
+
+        for char in str(value):
+            char = 'Dot' if char == '.' else char
+            char = 'Equals' if char == '=' else char
+            char = 'Plus' if char == '+' else char
+            char = 'Minus' if char == '-' else char
+            char = 'Multiply' if char == '*' else char
+            char = 'Divide' if char == '/' else char
+
+            self.wait_for_element_and_click(
+                self.keyboardButtonTmpl.replace('{char}', char),
+                error_message=f'Cannot find buttonKeyboard{char}'
+            )
+
+        if note is not None:
+            self.wait_for_element_and_send_keys(
+                self.noteInputField,
+                value=note,
+                error_message='Cannot find textViewNote'
+            )
+
+        self.wait_for_element_and_click(
+            self.chooseCategoryButton,
+            error_message='Cannot find keyboard_action_button'
+        )
+
+        self.wait_for_element_and_click(
+            self.categoryElementTmpl.replace('{text}', category),
+            error_message=f'Cannot find category {category}'
+        )
+
+    def add_income(self, value, category, note=None):
+        self.wait_for_element_and_click(
+            self.incomeButton,
+            error_message='Cannot find income_button'
         )
         self.wait_for_element_present(
             self.amountText,
@@ -91,4 +136,26 @@ class DashboardPageObject (MainPageObject):
         return self.wait_for_element_and_click(
             self.sliderButton,
             error_message='Cannot find slider button'
+        )
+
+    def search(self, query):
+        self.wait_for_element_and_click(
+            self.searchIcon,
+            error_message='Cannot find search icon'
+        )
+        self.wait_for_element_and_send_keys(
+            self.searchInputField,
+            value=query,
+            error_message='Cannot find search input field'
+        )
+
+        self.wait_for_element_and_click(
+            self.firstSuggestion,
+            error_message='Cannot find suggestion list'
+        )
+
+    def assert_piegraph_presence(self):
+        self.wait_for_elements_present(
+            self.piegraph,
+            error_message='Cannot find piegraph'
         )

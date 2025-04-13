@@ -53,6 +53,8 @@ Priority: High
 Reasoning: Use a variety of input data and edge cases.
 
 - Adding an expense with past/future date
+- Adding math expression as a value of expense/income \
+  Finding: The clear icon removes the last part of the expression instead of the whole value
 - Very large amounts (e.g. 999999.99)
 - Invalid values (e.g. letters instead of numbers)
 - Emojis or special characters in notes

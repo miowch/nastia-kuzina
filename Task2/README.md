@@ -32,7 +32,7 @@
    add the path to the app as the desired capability in webdriver.py
 
    ```
-   app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/'
+   app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/{apkFile}'
    ```
 
 3. Make sure it is the only connected device.
@@ -42,6 +42,5 @@
 4. Run tests.
 
    ```bash
-    pytest Task2/test_one.py
-
+    pytest
    ```
