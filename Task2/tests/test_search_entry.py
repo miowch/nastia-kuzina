@@ -1,3 +1,5 @@
+import allure
+
 from Task2.utils.core_test_case import CoreTestCase
 from Task2.utils.ui.dashboard_page_object import DashboardPageObject
 from Task2.utils.ui.main_page_object import MainPageObject
@@ -11,12 +13,15 @@ class TestSearchEntry(CoreTestCase):
         self.dashboard_page_object = DashboardPageObject(self.driver)
         self.search_result_page_object = SearchResultPageObject(self.driver)
 
+    @allure.title("Search For Entry By Category")
+    @allure.severity(allure.severity_level.CRITICAL)
     def test_search_by_category(self):
         food_category = 'Food'
         search_query = 'Food'
         self.dashboard_page_object.add_expense('16+4', food_category)
         self.dashboard_page_object.assert_balance('-$20.00')
 
+        self.dashboard_page_object.wait_until_notification_disappears()
         self.dashboard_page_object.add_expense(16, 'Clothes')
         self.dashboard_page_object.assert_balance('-$36.00')
 

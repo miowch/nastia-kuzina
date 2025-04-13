@@ -1,5 +1,7 @@
 from typing import Final
 
+import allure
+
 from Task2.utils.ui.main_page_object import MainPageObject
 
 
@@ -17,11 +19,13 @@ class DashboardPageObject (MainPageObject):
     balanceAmount: Final = 'id:com.monefy.app.lite:id/balance_amount'
     expenseAmount: Final = 'id:com.monefy.app.lite:id/expense_amount_text'
     incomeAmount: Final = 'id:com.monefy.app.lite:id/income_amount_text'
+    notification: Final = 'id:com.monefy.app.lite:id/snackbar_text'
 
     keyboardButtonTmpl: str = 'id:com.monefy.app.lite:id/buttonKeyboard{char}'
     categoryElementTmpl: str = 'xpath://android.widget.TextView[@resource-id="com.monefy.app.lite:id/textCategoryName" and @text="{text}"]'
     textElementTmpl: str = 'xpath://android.widget.TextView[@text="{text}"]'
 
+    @allure.step("Add expense")
     def add_expense(self, value, category, note=None):
         self.wait_for_element_and_click(
             self.expenseButton,
@@ -62,6 +66,7 @@ class DashboardPageObject (MainPageObject):
             error_message=f'Cannot find category {category}'
         )
 
+    @allure.step("Add income")
     def add_income(self, value, category, note=None):
         self.wait_for_element_and_click(
             self.incomeButton,
@@ -102,6 +107,7 @@ class DashboardPageObject (MainPageObject):
             error_message=f'Cannot find category {category}'
         )
 
+    @allure.step("Check balance is correct")
     def assert_balance(self, expected_balance):
         self.assert_element_has_text(
             self.balanceAmount,
@@ -109,6 +115,7 @@ class DashboardPageObject (MainPageObject):
             error_message='Cannot find balance_amount'
         )
 
+    @allure.step("Check percentage is correct on the piechart")
     def assert_percentage(self, percentage, occurrence_number=1):
         elements = self.wait_for_elements_present(
             self.textElementTmpl.replace('{text}', percentage),
@@ -117,6 +124,7 @@ class DashboardPageObject (MainPageObject):
 
         return len(elements) == occurrence_number
 
+    @allure.step("Check total amounts in the center of the piechart")
     def assert_income_and_expense_amounts(self, income_amount, expense_amount):
         error_message='Cannot find text'
 
@@ -132,12 +140,14 @@ class DashboardPageObject (MainPageObject):
             error_message=error_message
         )
 
+    @allure.step("Open balance records")
     def open_balance_records(self):
         return self.wait_for_element_and_click(
             self.sliderButton,
             error_message='Cannot find slider button'
         )
 
+    @allure.step("Perform search")
     def search(self, query):
         self.wait_for_element_and_click(
             self.searchIcon,
@@ -154,8 +164,16 @@ class DashboardPageObject (MainPageObject):
             error_message='Cannot find suggestion list'
         )
 
+    @allure.step("Check the piechart presents")
     def assert_piegraph_presence(self):
         self.wait_for_elements_present(
             self.piegraph,
             error_message='Cannot find piegraph'
+        )
+
+    @allure.step("Wait until notification disappears")
+    def wait_until_notification_disappears(self):
+        self.wait_for_element_not_present(
+            self.notification,
+            error_message="Notification still presents"
         )

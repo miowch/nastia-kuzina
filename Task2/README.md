@@ -16,6 +16,8 @@
 3. Create and activate virtual environment (e.g. n26_nastia_kuzina).
    ```bash
    pyenv virtualenv n26_nastia_kuzina
+   ```
+   ```bash
    pyenv activate n26_nastia_kuzina
    ```
 4. Install packages from "requirements file"
@@ -26,7 +28,7 @@
 ## Running the tests
 
 1. [Start Appium Server.](https://appium.io/docs/en/latest/quickstart/install/#starting-appium)
-2. Run an emulator with installed Monefy app
+1. Run an emulator with installed Monefy app
 
    If the app is not installed,
    add the path to the app as the desired capability in webdriver.py
@@ -35,12 +37,15 @@
    app='<PATH-TO-YOUR-CLONED-DIRECTORY>/Task2/apks/{apkFile}'
    ```
 
-3. Make sure it is the only connected device.
+1. Make sure it is the only connected device.
    ```bash
    adb devices
    ```
-4. Run tests.
-
+1. Run tests.
    ```bash
-    pytest
+   pytest --alluredir Task2/allure-results
+   ```
+1. Generate Allure report
+   ```bash
+   allure serve Task2/allure-results
    ```

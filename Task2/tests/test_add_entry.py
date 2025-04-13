@@ -1,3 +1,5 @@
+import allure
+
 from Task2.utils.core_test_case import CoreTestCase
 from Task2.utils.ui.balance_records_page_object import BalanceRecordsPageObject
 from Task2.utils.ui.dashboard_page_object import DashboardPageObject
@@ -11,6 +13,8 @@ class TestAddEntry(CoreTestCase):
         self.dashboard_page_object = DashboardPageObject(self.driver)
         self.balance_records_page_object = BalanceRecordsPageObject(self.driver)
 
+    @allure.title("Add Expenses With Note")
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_add_expenses(self):
         self.dashboard_page_object.add_expense(5, 'Eating out', 'coffee')
 
@@ -28,6 +32,8 @@ class TestAddEntry(CoreTestCase):
         self.balance_records_page_object.assert_note_presence('coffee')
         self.balance_records_page_object.assert_transaction_date_presence()
 
+    @allure.title("Add Income Without Note")
+    @allure.severity(allure.severity_level.BLOCKER)
     def test_add_income(self):
         self.dashboard_page_object.add_income(2080.59, 'Salary')
 
