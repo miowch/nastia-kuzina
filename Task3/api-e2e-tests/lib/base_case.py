@@ -49,7 +49,12 @@ class BaseCase:
         return MyRequests.post(
             "/pet/",
             data=data)
-        
+    
+    @allure.step("Get pet")
+    def get_pet(self, id):
+        return MyRequests.get(
+            f"/pet/{id}")
+
     @allure.step("Delete pet")
     def delete_pet(self, pet_id):
         return MyRequests.delete(f"/pet/{pet_id}")
