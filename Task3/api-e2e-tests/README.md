@@ -74,7 +74,6 @@
 
 ## Reasoning
 
-your approach and why you chose that particular tech stack
 I tried to achieve scalability and maintainability of the tests by leaning to the following rules:
 
 1. Tests logic is separated from tests framework implementation. Util methods are in the lib folder, tests are stored in the tests one.
