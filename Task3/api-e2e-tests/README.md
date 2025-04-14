@@ -69,7 +69,7 @@
 1. Generate Allure report
 
    ```bash
-   allure serve allure-results
+   allure serve allure_results
    ```
 
 ## Reasoning

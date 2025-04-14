@@ -1,0 +1,990 @@
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_only_required_fields (call)
+Time: 2025-04-14 20:19:16.866870
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'name': 'Sonya', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet (call)
+Time: 2025-04-14 20:19:16.992016
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 33, 'name': 'Brandon', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_without_required_field[name] (call)
+Time: 2025-04-14 20:19:17.086756
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 28, 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_without_required_field[photoUrls] (call)
+Time: 2025-04-14 20:19:17.184475
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 22, 'name': 'Susan', 'category': {'id': 1, 'name': 'Dogs'}, 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_existing_id (call)
+Time: 2025-04-14 20:19:17.296609
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 96, 'name': 'Matthew', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_id[15] (call)
+Time: 2025-04-14 20:19:17.398103
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': '15', 'name': 'Sandra', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_id[two] (call)
+Time: 2025-04-14 20:19:17.530299
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 'two', 'name': 'Amber', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_id[2.5] (call)
+Time: 2025-04-14 20:19:17.644832
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': '2.5', 'name': 'Jennifer', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_name[400] (call)
+Time: 2025-04-14 20:19:17.749263
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 850, 'name': 400, 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_name[True] (call)
+Time: 2025-04-14 20:19:17.847944
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 133, 'name': True, 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_status (call)
+Time: 2025-04-14 20:19:17.948517
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 22, 'name': 'Catherine', 'photoUrls': ['string'], 'status': 'wrong'}
+Request headers: {}
+Request cookies: {}
+
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_photoUrls (call)
+Time: 2025-04-14 20:19:18.058037
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 531, 'name': 'Sarah', 'photoUrls': ('string', 2, 7)}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":531,"name":"Sarah","photoUrls":[]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '40', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_add_pet.py::TestAddPet::test_add_pet_with_invalid_parameter (call)
+Time: 2025-04-14 20:19:18.299730
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 742, 'name': 'Andrea', 'owner': 'Matthew Reynolds'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":742,"name":"Andrea"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '26', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet (call)
+Time: 2025-04-14 20:19:18.319561
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 19, 'name': 'Tiffany', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":19,"name":"Tiffany","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '86', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet (call)
+Time: 2025-04-14 20:19:18.333450
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/19
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: Pet deleted
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '11', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet (call)
+Time: 2025-04-14 20:19:18.347062
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/19
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: Pet not found
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '13', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet_with_invalid_id[False] (call)
+Time: 2025-04-14 20:19:18.360405
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/False
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: couldn't convert `False` to type `class java.lang.Long`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '93', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet_with_invalid_id[two] (call)
+Time: 2025-04-14 20:19:18.393795
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/two
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: couldn't convert `two` to type `class java.lang.Long`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '91', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_pet_with_invalid_id[2.5] (call)
+Time: 2025-04-14 20:19:18.412605
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/2.5
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: couldn't convert `2.5` to type `class java.lang.Long`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '91', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_nonexisting_pet (call)
+Time: 2025-04-14 20:19:18.431292
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 29, 'name': 'Elizabeth', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":29,"name":"Elizabeth","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '88', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_nonexisting_pet (call)
+Time: 2025-04-14 20:19:18.439798
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/29
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: Pet deleted
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '11', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_delete_pet.py::TestDeletePet::test_delete_nonexisting_pet (call)
+Time: 2025-04-14 20:19:18.446772
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/29
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: Pet deleted
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '11', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_status (call)
+Time: 2025-04-14 20:19:18.458599
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 73, 'name': 'Edward', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":73,"name":"Edward","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '85', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_status (call)
+Time: 2025-04-14 20:19:18.469467
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByStatus?status=available
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: [{"id":1,"category":{"id":2,"name":"Cats"},"name":"Cat 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":2,"category":{"id":2,"name":"Cats"},"name":"Cat 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":4,"category":{"id":1,"name":"Dogs"},"name":"Dog 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":7,"category":{"id":4,"name":"Lions"},"name":"Lion 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag1"},{"id":2,"name":"tag2"}],"status":"available"},{"id":8,"category":{"id":4,"name":"Lions"},"name":"Lion 2","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag2"},{"id":2,"name":"tag3"}],"status":"available"},{"id":9,"category":{"id":4,"name":"Lions"},"name":"Lion 3","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":10,"category":{"id":3,"name":"Rabbits"},"name":"Rabbit 1","photoUrls":["url1","url2"],"tags":[{"id":1,"name":"tag3"},{"id":2,"name":"tag4"}],"status":"available"},{"id":73,"name":"Edward","photoUrls":["string"],"tags":["name"],"status":"available"}]
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '1234', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_multiple_statuses (call)
+Time: 2025-04-14 20:19:18.481731
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 84, 'name': 'Holly', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":84,"name":"Holly","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '84', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_multiple_statuses (call)
+Time: 2025-04-14 20:19:18.490059
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 745, 'name': 'Miranda', 'photoUrls': ['string'], 'status': 'pending'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":745,"name":"Miranda","photoUrls":["string"],"status":"pending"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '69', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_multiple_statuses (call)
+Time: 2025-04-14 20:19:18.498556
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByStatus?status=available,pending
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: query parameter `status value `available,pending` is not in the allowable values `[available, pending, sold]`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '147', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_empty_status (call)
+Time: 2025-04-14 20:19:18.518464
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByStatus
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: No status provided. Try again?
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '30', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_status.py::TestFindByStatus::test_find_pets_by_incorrect_status (call)
+Time: 2025-04-14 20:19:18.528809
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByStatus?status=free
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: query parameter `status value `free` is not in the allowable values `[available, pending, sold]`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '134', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_tag (call)
+Time: 2025-04-14 20:19:18.544384
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 84, 'name': 'Courtney', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":84,"name":"Courtney","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '87', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_tag (call)
+Time: 2025-04-14 20:19:18.555382
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByTags?tags=name
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 500
+Response text: {"code":500,"message":"There was an error processing your request. It has been logged (ID: 85b0860857ae1a65)"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '110', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_multiple_tags (call)
+Time: 2025-04-14 20:19:18.578836
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 57, 'name': 'George', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":57,"name":"George","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '85', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_multiple_tags (call)
+Time: 2025-04-14 20:19:18.587900
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 822, 'name': 'Brianna', 'photoUrls': ['string'], 'tags': [{'id': 1, 'name': 'tag1'}]}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":822,"name":"Brianna","photoUrls":["string"],"tags":["name"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '66', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_multiple_tags (call)
+Time: 2025-04-14 20:19:18.595616
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByTags?tags=name,name
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 500
+Response text: {"code":500,"message":"There was an error processing your request. It has been logged (ID: 6efede6caaff28f6)"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '110', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_find_by_tag.py::TestFindByTag::test_find_pets_by_empty_tag (call)
+Time: 2025-04-14 20:19:18.615010
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/findByTags
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: No tags provided. Try again?
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '28', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_id (call)
+Time: 2025-04-14 20:19:18.628479
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 46, 'name': 'Kyle', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":46,"name":"Kyle","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '83', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_id (call)
+Time: 2025-04-14 20:19:18.637283
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/46
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":46,"name":"Kyle","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '83', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_invalid_id (call)
+Time: 2025-04-14 20:19:18.647972
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/one
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 400
+Response text: {"code":400,"message":"Input error: couldn't convert `one` to type `class java.lang.Long`"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '91', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_nonexisting_id (call)
+Time: 2025-04-14 20:19:18.668961
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 57, 'name': 'Susan', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":57,"name":"Susan","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '84', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_nonexisting_id (call)
+Time: 2025-04-14 20:19:18.678477
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/57
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: Pet deleted
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '11', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_get_pet.py::TestGetPet::test_get_pet_by_nonexisting_id (call)
+Time: 2025-04-14 20:19:18.688520
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/57
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: Pet not found
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '13', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet (call)
+Time: 2025-04-14 20:19:18.700034
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 19, 'name': 'Jessica', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":19,"name":"Jessica","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '86', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet (call)
+Time: 2025-04-14 20:19:18.711729
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 19, 'name': 'Margaret', 'photoUrls': ['gewd_boy.png']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":19,"name":"Margaret","photoUrls":["gewd_boy.png"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '56', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet (call)
+Time: 2025-04-14 20:19:18.719864
+Request method: GET
+Request URL: http://pet-store-swagger:8080/api/v3/pet/19
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":19,"name":"Margaret","photoUrls":["gewd_boy.png"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '56', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[id] (call)
+Time: 2025-04-14 20:19:18.735043
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 29, 'name': 'Kathryn', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":29,"name":"Kathryn","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '86', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[id] (call)
+Time: 2025-04-14 20:19:18.747650
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'name': 'Ashley', 'photoUrls': ['gewd_boy.png']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 500
+Response text: {"code":500,"message":"There was an error processing your request. It has been logged (ID: 82e74580caa898b4)"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '110', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[name] (call)
+Time: 2025-04-14 20:19:18.775163
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 81, 'name': 'Stephanie', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":81,"name":"Stephanie","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '88', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[name] (call)
+Time: 2025-04-14 20:19:18.786297
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 81, 'photoUrls': ['gewd_boy.png']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":81,"photoUrls":["gewd_boy.png"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '38', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[photoUrls] (call)
+Time: 2025-04-14 20:19:18.806925
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 3, 'name': 'Nina', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":3,"name":"Nina","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '82', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_without_required_field[photoUrls] (call)
+Time: 2025-04-14 20:19:18.817661
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 3, 'name': 'Eduardo'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":3,"name":"Eduardo"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '25', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_id[False] (call)
+Time: 2025-04-14 20:19:18.836543
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': False, 'name': 'Randall', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 500
+Response text: {"code":500,"message":"There was an error processing your request. It has been logged (ID: 4b26e0ce1a14c3c4)"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '110', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_id[two] (call)
+Time: 2025-04-14 20:19:18.857278
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 'two', 'name': 'Corey', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 500
+Response text: {"code":500,"message":"There was an error processing your request. It has been logged (ID: 38eb5579a762563c)"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '110', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_id[2.5] (call)
+Time: 2025-04-14 20:19:18.877036
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': '2.5', 'name': 'Deborah', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":2,"name":"Deborah","photoUrls":["string"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '48', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_name[400] (call)
+Time: 2025-04-14 20:19:18.895531
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 78, 'name': 'Benjamin', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":78,"name":"Benjamin","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '87', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_name[400] (call)
+Time: 2025-04-14 20:19:18.905518
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 78, 'name': 400, 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":78,"name":"400","photoUrls":["string"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '45', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_name[True] (call)
+Time: 2025-04-14 20:19:18.926214
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 81, 'name': 'Dawn', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":81,"name":"Dawn","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '83', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_name[True] (call)
+Time: 2025-04-14 20:19:18.935093
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 81, 'name': True, 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":81,"name":"True","photoUrls":["string"]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '46', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_status (call)
+Time: 2025-04-14 20:19:18.954983
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 58, 'name': 'James', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":58,"name":"James","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '84', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_status (call)
+Time: 2025-04-14 20:19:18.964829
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 58, 'name': 'Michelle', 'photoUrls': ['string'], 'status': 'wrong'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":58,"name":"Michelle","photoUrls":["string"],"status":"wrong"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '67', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_photoUrls (call)
+Time: 2025-04-14 20:19:18.981834
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 4, 'name': 'Albert', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":4,"name":"Albert","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '84', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_photoUrls (call)
+Time: 2025-04-14 20:19:18.989889
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 4, 'name': 'Tina', 'photoUrls': ('string', 2, 7)}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":4,"name":"Tina","photoUrls":[]}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:18 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '37', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_parameter (call)
+Time: 2025-04-14 20:19:19.005461
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 52, 'name': 'Spencer', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":52,"name":"Spencer","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:19 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '86', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_invalid_parameter (call)
+Time: 2025-04-14 20:19:19.015650
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 52, 'name': 'Jeremiah', 'owner': 'Eric Russell'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":52,"name":"Jeremiah"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:19 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '27', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_nonexisting_id (call)
+Time: 2025-04-14 20:19:19.031306
+Request method: POST
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 86, 'name': 'Daniel', 'category': {'id': 1, 'name': 'Dogs'}, 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'tag1'}], 'status': 'available'}
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: {"id":86,"name":"Daniel","photoUrls":["string"],"tags":["name"],"status":"available"}
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:19 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '85', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_nonexisting_id (call)
+Time: 2025-04-14 20:19:19.040010
+Request method: DELETE
+Request URL: http://pet-store-swagger:8080/api/v3/pet/86
+Request data: None
+Request headers: {}
+Request cookies: {}
+
+Response code: 200
+Response text: Pet deleted
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:19 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '11', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
+
+------
+Test: tests/test_update_pet.py::TestUpdatePet::test_update_pet_with_nonexisting_id (call)
+Time: 2025-04-14 20:19:19.046885
+Request method: PUT
+Request URL: http://pet-store-swagger:8080/api/v3/pet/
+Request data: {'id': 86, 'name': 'Paul', 'photoUrls': ['string']}
+Request headers: {}
+Request cookies: {}
+
+Response code: 404
+Response text: Pet not found
+Response headers: {'Date': 'Mon, 14 Apr 2025 20:19:19 GMT', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Access-Control-Expose-Headers': 'Content-Disposition', 'Content-Type': 'application/json', 'Content-Length': '13', 'Server': 'Jetty(9.4.9.v20180320)'}
+Request cookies: {}
+
+------
