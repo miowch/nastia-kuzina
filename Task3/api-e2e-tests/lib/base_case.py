@@ -36,7 +36,7 @@ class BaseCase:
             "tags": [
                 {
                 "id": 0,
-                "name": "string"
+                "name": "tag1"
                 }
             ],
             "status": "available"
