@@ -1,6 +1,7 @@
 import requests
 import allure
 
+from environment import ENV_OBJECT
 from lib.logger import Logger
  
  
@@ -27,7 +28,7 @@ class MyRequests:
 
     @staticmethod
     def _send(url: str, data: dict, headers: dict, cookies: dict, method: str):
-        url = f"http://localhost:8080/api/v3{url}"
+        url = f"{ENV_OBJECT.get_base_url()}{url}"
 
         if headers is None:
             headers = {}

@@ -1,3 +1,4 @@
 allure-python-commons
+allure-pytest
 requests
 pytest

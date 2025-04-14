@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  pet-store-swagger:
+    image: swaggerapi/petstore3:unstable
+    ports:
+      - "8080:8080"
+    networks:
+      - test-net
+
+  test_runner:
+    build: .
+    image: pytest_runner
+    container_name: pytest_runner_works
+    environment:
+      - ENV=local
+      - API_BASE_URL=http://pet-store-swagger:8080/api/v3
+    volumes:
+      - .:/tests_project/
+    depends_on:
+      pet-store-swagger:
+        condition: service_started
+    networks:
+      - test-net
+
+networks:
+  test-net:
+    driver: bridge
