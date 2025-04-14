@@ -97,4 +97,4 @@ Reasoning: Put the UI/UX under a spotlight.
 | Incorrect totals     | 🔥 High   | Undermines purpose of app          |
 | Offline scenarios    | ⚠️ Medium | May go unnoticed until too late    |
 | UI inconsistencies   | ⚠️ Medium | Frustrates users, kills retention  |
-| Localization bugs    | ✅ Medium | Easy to miss, affects global use   |
+| Localization bugs    | ⚠️ Medium | Easy to miss, affects global use   |

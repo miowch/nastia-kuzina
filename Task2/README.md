@@ -71,6 +71,7 @@ I tried to achieve scalability and maintainability of the tests by leaning to th
 1. Explicit waits for elements presence or invisibility instead of sleep method.
 1. Clear reporting with Allure annotations.
 1. Clear README file with information about the project setup and instruction of how to run tests.
+1. Disclaimer: the next critical step if I have more time would be to integrate the solution into GitHub Actions (or any other CI/CD pipeline that is used in the company).
 
 I chose **Python** language because I feel more confident in writing the code in it. If I have more time I would rather use **Kotlin** but the rest would be the same, Appium and Allure.
 
