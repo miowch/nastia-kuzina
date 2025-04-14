@@ -3,7 +3,7 @@ from lib.assertions import Assertions
 from lib.base_case import BaseCase
 from lib.my_requests import MyRequests
 
-class TestAddPet(BaseCase):
+class TestAddPet (BaseCase):
     absent_required_fields = [
          ("name"),
          ("photoUrls")
@@ -71,9 +71,3 @@ class TestAddPet(BaseCase):
             data=new_pet_data2)
         
         Assertions.assert_code_status(response2, 400)
-
-
-
-
-
-

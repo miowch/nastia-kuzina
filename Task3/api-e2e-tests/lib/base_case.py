@@ -50,3 +50,6 @@ class BaseCase:
             "/pet/",
             data=data)
         
+    @allure.step("Delete pet")
+    def delete_pet(self, pet_id):
+        return MyRequests.delete(f"/pet/{pet_id}")

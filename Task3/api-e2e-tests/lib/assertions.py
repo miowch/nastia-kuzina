@@ -44,3 +44,8 @@ class Assertions:
 
         for name in names:
             assert name in response_as_dict, f"Response JSON doesn't have key '{name}"
+
+    @staticmethod
+    def assert_error_message(response: Response, expected_error_message):
+        assert response.content.decode() == expected_error_message, \
+            f"Unexpected error message: {response.content} instead of {expected_error_message}"
